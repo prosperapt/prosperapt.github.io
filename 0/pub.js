@@ -1,6 +1,6 @@
 const pub = 1;
 const des = "https://disney.com/";
-const img = "/pub.jpg";
+const img = "/0/pub.jpg";
 const tex = "Miau! Este é um texto promocional deste <a id='pub'>produto maravilhoso</a> que deve comprar. Pode conter legalmente até 120 caracteres!";
 
 /** Não mexer. **/

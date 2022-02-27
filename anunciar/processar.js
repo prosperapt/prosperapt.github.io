@@ -5,7 +5,7 @@ const filename = Deno.args[0]; // Same name as downloaded_filename `const filena
 const json = await readJSON(filename);
 
 // Step 2: Filter specific data we want to keep and write to a new JSON file
-const v = json[7];
+const v = json;
 
 // Step 3. Write a new JSON file with our filtered data
 const newFilename = 'anunciar/conta.json'; // name of a new file to be saved

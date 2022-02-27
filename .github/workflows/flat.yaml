@@ -26,3 +26,4 @@ jobs:
         with:
           http_url: https://api.countapi.xyz/info/pteste/conta # The data to fetch every 5 minutes
           downloaded_filename: anunciar/conta-temp.json # The http_url gets saved and renamed in our repository as btc-price.json
+          postprocess: anunciar/processar.js 

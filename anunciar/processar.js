@@ -6,7 +6,8 @@ const json = await readJSON(filename);
 
 // Step 2: Filter specific data we want to keep and write to a new JSON file
 const v = Object.values(json);
+const x = v[7];
 
 // Step 3. Write a new JSON file with our filtered data
 const newFilename = 'anunciar/conta.json'; // name of a new file to be saved
-await writeJSON(newFilename, v); // create a new JSON file with just the Bitcoin price
+await writeJSON(newFilename, x); // create a new JSON file with just the Bitcoin price

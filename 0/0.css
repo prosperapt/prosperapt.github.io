@@ -1,6 +1,6 @@
 :root { --claro-cor:#222; --claro-fundo:#fff; --claro-forte:#006400; --escuro-cor:#eee; --escuro-fundo:#111; --escuro-forte:#00c000 }
 
-@font-face { font-family:'Inter'; font-style:normal; font-weight:700; src:url('/0/700.woff2') format('woff2') }
+@font-face { font-family:'Inter'; font-style:normal; font-weight:700; src:url('/0/inter.woff2') format('woff2') }
 
 body { font-size:1.1em; font-family:sans-serif; line-height:1.7; margin: 0 auto; max-width:30em; color:var(--claro-cor); background-color:var(--claro-fundo) }
 

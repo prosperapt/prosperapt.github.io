@@ -9,5 +9,5 @@ const v = Object.values(json.value);
 
 
 // Step 3. Write a new JSON file with our filtered data
-const newFilename = 'anunciar/v.json'; // name of a new file to be saved
+const newFilename = 'anunciar/conta.json'; // name of a new file to be saved
 await writeJSON(newFilename, v); // create a new JSON file with just the Bitcoin price

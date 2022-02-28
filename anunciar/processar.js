@@ -9,6 +9,6 @@ const valor = Object.values(json)[7]; // É a variável "value" no ficheiro
 var agora = new Date();
 const ficheiro2 = 'anunciar/conta.js'; // É o ficheiro conta.js
 var anterior = await Deno.readTextFile(ficheiro2); // Obtém as contagens anteriores
-anterior = anterior.replace("]", "").replace(";", "").replace(/[\n\r]+/g, ""); // Elimina os dois últimos caracteres ("];") e alguma linha nova
-const proximo = anterior + ", " + (agora * 1) + ": " + valor + "];"; // Acrescenta nova contagem
+anterior = anterior.replace("}", "").replace(";", "").replace(/[\n\r]+/g, ""); // Elimina os dois últimos caracteres ("};") e alguma linha nova
+const proximo = anterior + ", " + (agora * 1) + ": " + valor + "};"; // Acrescenta nova contagem
 await Deno.writeTextFile(ficheiro2, proximo); // Grava no ficheiro

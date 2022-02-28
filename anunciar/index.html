@@ -20,10 +20,11 @@ var txt = "";
 var keys = Object.keys(conta);
 
 for (key in keys) {
-	txt += keys[key] + " " + conta[keys[key]] + "<br>";
+	txt += new Date(keys[key] * 1).toTimeString().substr(0,5) + " " + conta[keys[key]] + "<br>";
 }
 
-document.getElementById('conta').innerHTML = txt;</script>
+document.getElementById('conta').innerHTML = txt;
+</script>
 </article>
 </body>
 </html>

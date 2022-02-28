@@ -1,18 +1,13 @@
 import { readJSON } from 'https://deno.land/x/flat@0.0.14/mod.ts'; 
 
-// Step 1: Read the downloaded_filename JSON
-const filename = Deno.args[0]; // Same name as downloaded_filename `const filename = 'btc-price.json';`
-const json = await readJSON(filename);
+// Passo 1: Obter ficheiro do contador e copiar a última variável 
+const ficheiro1 = Deno.args[0]; // É o indicado no flat.yaml
+const json = await readJSON(ficheiro1); 
+const valor = Object.values(json)[7]; // É a variável "value" no ficheiro
 
-// Step 2: Filter specific data we want to keep and write to a new JSON file
-const v = Object.values(json)[7];
-
-// Step 3. Write a new JSON file with our filtered data
-const newFilename = 'anunciar/conta.js'; // name of a new file to be saved
-// await writeJSON(newFilename, v, { append: true }); // create a new JSON file with just the Bitcoin price
-
-var anterior = await Deno.readTextFile(newFilename);
-anterior = anterior.substring(0, anterior.length-2);
-const proximo = anterior + ", " + v + "];";
-console.log(proximo);
-await Deno.writeTextFile(newFilename, proximo);
+// Passo 2: adicionar a contagem ao ficheiro de acumulação de contagem
+const ficheiro2 = 'anunciar/conta.js'; // É o ficheiro conta.js
+var anterior = await Deno.readTextFile(ficheiro2); // Obtém as contagens anteriores
+anterior = anterior.substring(0, anterior.length-2); // Elimina os dois últimos caracteres: "];"
+const proximo = anterior + ", " + valor + "];"; // Acrescenta nova contagem
+await Deno.writeTextFile(ficheiro2, proximo); // Grava no ficheiro

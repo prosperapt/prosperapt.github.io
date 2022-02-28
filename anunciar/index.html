@@ -16,8 +16,14 @@
 <p id="conta">
 
 <script>
-document.getElementById('conta').innerHTML = conta;
-</script>
+var txt = "";
+var keys = Object.keys(conta);
+
+for (key in keys) {
+	txt += keys[key] + " " + conta[keys[key]] + "<br>";
+}
+
+document.getElementById('conta').innerHTML = txt;</script>
 </article>
 </body>
 </html>

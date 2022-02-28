@@ -4,9 +4,5 @@ const cab = document.getElementById("logo");
 	cab.innerHTML = svg;
 
 const rod = document.createElement("footer");
-	rod.innerHTML = svg;
+	rod.innerHTML = svg + "<img src='https://api.countapi.xyz/hit/pteste/conta?img' alt='' style='opacity:1%'>";
 	document.body.appendChild(rod);
-
-const scr = document.createElement("script");
-	scr.src = "https://api.countapi.xyz/hit/pteste/conta";
-	document.head.appendChild(scr);

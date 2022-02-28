@@ -13,8 +13,8 @@ console.log(v);
 const newFilename = 'anunciar/conta.json'; // name of a new file to be saved
 // await writeJSON(newFilename, v, { append: true }); // create a new JSON file with just the Bitcoin price
 
-const anterior = await readTextFile(newFilename);
+const anterior = await Deno.readTextFile(newFilename);
 console.log(anterior);
 const proximo = anterior + "\n" + v;
 console.log(proximo);
-await writeTextFile(newFilename, proximo);
+await Deno.writeTextFile(newFilename, proximo);

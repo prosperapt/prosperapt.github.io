@@ -1,1 +1,38 @@
-Esta página não existe.
+<!doctype html>						
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/0/0.css">
+<link rel="icon" href="/0/fav.svg">
+<script src="/0/log.js" defer></script>
+<script>
+window.onload = function() { const p = (document.location + "").split("/"); document.getElementById("pesquisa").value = p[p.length-1]; };
+</script>
+<title>404</title>
+</head>
+<body>
+<article>
+<p id="logo"><a href="/">Prospera</a>
+
+<h1>404</h1>
+
+<p>Ups! Não encontramos a página que nos está a pedir! 😱
+
+<p>
+<form method="get" action="https://duckduckgo.com/">
+Regresse à página inicial do <a href="/">Prospera</a> ou <label for="pesquisa">pesquise</label> neste domínio: 
+    <input type="hidden" name="sites" value="prospera.pt">
+    <input type="hidden" name="k7" value="#ffffff">
+    <input type="hidden" name="k8" value="#222222">
+    <input type="hidden" name="k9" value="#006400">
+    <input type="hidden" name="kx" value="#006400">
+    <input type="hidden" name="kj" value="#006400">
+    <input type="hidden" name="kt" value="p">
+    <input type="text" name="q" id="pesquisa" style="width:6em; text-align:left">
+    <button type="submit">Pesquisar</button>.
+</form>
+</article>
+</body>
+</html>

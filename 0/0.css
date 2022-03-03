@@ -4,17 +4,19 @@
 
 body { font-size:1.1em; font-family:sans-serif; line-height:1.7; margin: 0 auto; max-width:30em; color:var(--claro-cor); background-color:var(--claro-fundo) }
 
+a, a:visited { color:var(--claro-forte) }
+a:hover { text-decoration:none }
+
 header { display:flex; margin: 1.5em 0; font-size:.875em }
 header span small { float:left; display:block; transform:rotate(-90deg); font-size:.65em; margin: .5em 0 0 }
 header img { margin:0 1em 0 0; width:160px; height:120px; border:0 }
 
 article { margin:1em auto; max-width:30em }
 
-footer { margin:3em 0 0; padding:1.5em 1.5em 1em; max-width:30em; background-color:var(--claro-forte); color:var(--claro-fundo) }
-footer img { filter:grayscale(1) brightness(3) }
-
-a, a:visited { color:var(--claro-forte) }
-a:hover { text-decoration:none }
+footer { margin:3em 0 0; padding:1.5em 1.5em 1em; max-width:30em; background-color:var(--claro-forte); color:var(--claro-fundo); display:grid; grid-template-columns:50% 50% }
+footer img { opacity:1% }
+footer a, footer a:visited { text-decoration:none; color:var(--claro-fundo) }
+footer a:hover { text-decoration:underline }
 
 h1 { font-size:3.75em; line-height:1; font-family:'Inter'; font-weight:700; letter-spacing:-0.03em; margin:.5em 0 }
 

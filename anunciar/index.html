@@ -13,16 +13,17 @@
 <article>
 <p id="logo"><a href="/">Prospera</a>
 
-<p>Registo diário do contador. Programado para as 23h; hora provável: 23h57.
+<p>Registo diário do contador. Reprogramado para as 23h (@2022/03/03 às 17h20). Hora provável de registos diários: 23h07.
 
 <p id="conta">
 
 <script>
 var txt = "";
 var keys = Object.keys(conta);
+var d;
 
 for (key in keys) {
-	txt += new Date(keys[key] * 1).toTimeString().substr(0,5) + " " + conta[keys[key]] + "<br>";
+	txt += new Intl.DateTimeFormat('pt-PT', {dateStyle:'short',timeStyle:'short'}).format(keys[key] * 1) + " " + conta[keys[key]] + "<br>";
 }
 
 document.getElementById('conta').innerHTML = txt;

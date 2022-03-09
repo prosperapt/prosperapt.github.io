@@ -36,8 +36,7 @@ td:first-child { text-align:left }
 td:last-child { padding:1em 0 }
 tfoot td { border-bottom:0; border-top:.3em solid; }
 
-aside { float:right; font-size:.91em; border-left:solid .4em var(--claro-forte); padding:0 0 0 1.5em; margin: .5em 0 1.5em 1.5em; width:calc(50% - 2 * 2em); line-height:1.7
-}
+aside { float:right; font-size:.91em; border-left:solid .4em var(--claro-forte); padding:0 0 0 1.5em; margin: .5em 0 1.5em 1.5em; width:calc(50% - 2 * 2em); line-height:1.7 }
 aside p { margin:0 }
 
 input { font-family:inherit; font-size:1em; width:3em; text-align:right; border-width:0 0 .2em; background:none; color:inherit; outline:none; border-bottom-color:var(--claro-forte) }
@@ -53,9 +52,14 @@ footer .logo { fill:var(--claro-fundo) }
 .tranca { background-color:var(--claro-forte); padding:.2em .25em; color:var(--claro-fundo); margin-left:.25em; font-weight:700; font-size:.91em }
 .tranca:before { content: 'Λ' }
 
+.assina { background-color:var(--claro-forte); padding:.2em; color:var(--claro-fundo); font-weight:700; font-size:.91em; text-decoration:none }
+.assina:hover { background-color:var(--escuro-fundo); color:var(--escuro-cor) }
+
+.data { color:var(--claro-forte) }
+
 .partilha { margin-top:3em; display:flex; align-items:center }
 a.soc svg { fill:var(--claro-forte); height:1.5em; width:1.5em; padding:.2em; margin-left:.4em; border-radius:50%; border:solid .2em var(--claro-forte) }
-a.soc svg:hover { fill:var(--claro-fundo); background-color:var(--claro-forte) } 
+a.soc svg:hover { fill:var(--claro-fundo); background-color:var(--claro-forte) }
 
 @media (min-width: 800px) {
 	body { max-width: calc(34em + 160px) }
@@ -71,12 +75,12 @@ a.soc svg:hover { fill:var(--claro-fundo); background-color:var(--claro-forte) }
 	.partilha { display:none }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme:dark) {
 	body { background-color:var(--escuro-fundo); color:var(--escuro-cor) }
 
 	h2 { border-left: .3em solid var(--escuro-forte) }
 
-	a, a:visited { color:#00c000 }
+	a, a:visited { color:var(--escuro-forte }
 
 	aside, .analista { border-left:solid .4em var(--escuro-forte) }
 
@@ -85,6 +89,8 @@ a.soc svg:hover { fill:var(--claro-fundo); background-color:var(--claro-forte) }
 	.logo { fill:var(--escuro-forte) }
 
 	.tranca { background-color:var(--escuro-forte); color:var(--escuro-fundo) }
+	.assina { background-color:var(--escuro-forte); color:var(--escuro-fundo) }
+	.assina:hover { background-color:var(--claro-fundo); color:var(--claro-cor) }
 
 	a.soc svg { fill:var(--escuro-forte); border-color:var(--escuro-forte) }
 	a.soc svg:hover { fill:var(--escuro-fundo); background-color:var(--escuro-forte) } 

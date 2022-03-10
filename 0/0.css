@@ -41,7 +41,7 @@ aside p { margin:0 }
 
 input { font-family:inherit; font-size:1em; width:3em; text-align:right; border-width:0 0 .2em; background:none; color:inherit; outline:none; border-bottom-color:var(--claro-forte) }
 
-.logo { height:1.5em; fill:var(--claro-forte) }
+.logo { height:2em; fill:var(--claro-forte) }
 
 footer .logo { fill:var(--claro-fundo) }
 

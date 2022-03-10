@@ -52,7 +52,7 @@ footer .logo { fill:var(--claro-fundo) }
 .tranca { background-color:var(--claro-forte); padding:.2em .25em; color:var(--claro-fundo); margin-left:.25em; font-weight:700; font-size:.91em }
 .tranca:before { content: 'Λ' }
 
-.assina { background-color:var(--claro-forte); padding:.2em; color:var(--claro-fundo); font-weight:700; font-size:.91em; text-decoration:none }
+.assina { background-color:var(--claro-forte); padding:.2em; color:var(--claro-fundo); font-weight:700; font-size:.73em; text-decoration:none }
 .assina:hover { background-color:var(--escuro-fundo); color:var(--escuro-cor) }
 
 .data { color:var(--claro-forte) }

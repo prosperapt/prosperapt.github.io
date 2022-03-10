@@ -43,7 +43,7 @@ input { font-family:inherit; font-size:1em; width:3em; text-align:right; border-
 
 .logo { height:2em; fill:var(--claro-forte) }
 
-footer .logo { fill:var(--claro-fundo) }
+footer .logo { height:1.5em; fill:var(--claro-fundo) }
 
 .analista { font-size:.91em; border-left:solid .4em var(--claro-forte); padding:0 0 0 1.5em; margin-top:2em }
 

@@ -81,6 +81,8 @@ a.soc svg:hover { fill:var(--claro-fundo); background-color:var(--claro-forte) }
 	h2 { border-left: .3em solid var(--escuro-forte) }
 
 	a, a:visited { color:var(--escuro-forte) }
+	
+	.data { color:var(--escuro-forte) }
 
 	aside, .analista { border-left:solid .4em var(--escuro-forte) }
 

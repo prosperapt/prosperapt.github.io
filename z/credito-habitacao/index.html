@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Fixar a prestação da casa para sempre pode ser a melhor decisão financeira da sua vida. Hoje, o prémio a pagar para nunca mais se preocupar com as oscilações da taxa de juro é inferior a 1,5%, e pode ser nulo num abrir e fechar de olhos.">
+<meta name="keywords" content="crédito habitação, taxa fixa">
+<meta name="author" content="Luís Leitão">
+<link rel="stylesheet" href="https://prospera.pt/0/0.css">
+<link rel="icon" href="/0/fav.svg">
+<script src="/0/log.js" defer></script>
+<script src="/0/pub.js" defer></script>
+<script src="/0/soc.js" defer></script>
+<title>Credito habitação só com taxa fixa — Prospera</title>
+</head>
+<body>
+<article>
+<p id="logo"><a href="/">Prospera</a>
+
+<h1>Crédito habitação só com taxa fixa</h1>
+
+<h2>Fixar a prestação da casa para sempre pode ser a melhor decisão financeira da sua vida. Hoje, o prémio a pagar para nunca mais se preocupar com as oscilações da taxa de juro é inferior a 1,5%&hellip; e pode ser nulo num abrir e fechar de olhos. </h2>
+
+<p>Por <a href="/sobre/#luis">Luís Leitão</a> a 11 de março de 2022
+
+<p class="cap">O tempo do crédito barato está a chegar ao fim. Depois de seis anos marcados por taxas negativas, as Euribor deverão voltar a terreno positivo brevemente. E tudo por conta do disparo da taxa de inflação na Zona Euro, que em fevereiro atingiu um novo máximo de 5,8%, segundo uma estimativa rápida do <a href="https://ec.europa.eu/eurostat/documents/2995521/14358044/2-02032022-AP-EN.pdf/617fee08-c46f-453a-a308-4fa3d33f4aae">Eurostat</a> (há um ano estava nos 0,9%).
+
+<p>Para quem vai agora comprar casa, este é um sinal alerta. A probabilidade de no espaço de um ano a prestação subir é hoje muito superior do que há um ano. A não ser que em vez de fazer um crédito habitação indexado à taxa Euribor faça um crédito com taxa fixa.
+
+<p>Há sete anos, em abril de 2015, apenas o Banco BPI e o Novo Banco celebravam contratos de crédito habitação à taxa fixa a 30 anos. Hoje são nove: Abanca, Banco Best, Banco BPI, Banco CTT, Bankinter. Caixa Geral de Depósitos, Novo Banco, Novo Banco Açores e Unión de Créditos Inmobiliarios (UCI).
+
+<p>Desde 2015 a oferta de taxa fixa alargou-se e, acima de tudo, tornou-se competitiva. Muitos têm até a decorrer campanhas especiais para atrais mais clientes. É o caso do <a href=" https://www.bancobpi.pt/particulares/credito/credito-habitacao/credito-habitacao-taxa-fixa ">Banco BPI</a> que isenta as comissões iniciais do crédito (comissão de abertura de dossier, avaliação e preparação de minutas) para todas as propostas aprovadas até 31 de dezembro.
+
+<p>De acordo com simulações recolhidas a 11 de março junto de 12 instituições financeiras, a taxa anual nominal (TAN) média para um crédito de 100 mil euros a 30 anos à taxa fixa é de 2,32%. As mesmas condições para um crédito habitação indexada à Euribor a 12 meses é de 0,88%.
+
+<p> Significa que hoje o prémio a pagar para ter tranquilidade durante 30 anos em relação à prestação da casa é inferior a 1,5% (mais precisamente 1,44%). E pode rapidamente a ser anulado caso a Euribor a 12 meses (hoje a cotar nos -0,38%) ultrapasse a fasquia dos 1,1%.
+
+<p>Para um crédito de <input type="text" value="100 000" id="financia" onkeyup="calc()" style="width:4em"> euros a 30 anos, a prestação mensal para uma empréstimo de taxa fixa é de <strong id="pfixa">386 euros</strong>, assumindo a taxa média das 9 instituições financeiras que propõem agora financiamento para esse prazo à taxa fixa. É mais <strong id="delta">71 euros</strong> do que a oferta a taxa indexada à Euribor a 12 meses. No entanto, se essa Euribor passar a <span style="white-space:nowrap"><input type="text" value="1,10" id="tfixa" onkeyup="calc()">%</span>, a prestação do crédito à taxa variável muda para <strong id="pfixa2" style="white-space:nowrap">386 euros</strong>. Não se esqueça que, nos últimos 10 anos, a Euribor a 12 meses foi, em média, de <a href="javascript:document.getElementById('tfixa').value='0,09';calc();">0,09%</a> e, nos últimos 20 anos, de <a href="javascript:document.getElementById('tfixa').value='1,45';calc();">1,45%</a>. (Este parágrafo é interativo: mude os campos sublinhados para descobrir os números mais próximos da sua previsão.) <noscript>Infelizmente, o seu programa de navegação não permite conteúdo interativo; não vale a pena mudar os campos sublinhados.</noscript>
+
+  <script>
+  function presta30(montante,taxa){ return Math.round( (montante / ((1 - Math.pow(1 + taxa / 12, -360)) / (taxa / 12)))); }
+
+  function calc() {
+  	const txfixa = .0232;
+  	const txindexada = .0090;
+  	const spread = .0123;
+
+  	var f = document.getElementById("financia").value.replace(/[^\d]/g, "") * 1;
+  	document.getElementById("financia").value = f.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0});
+
+  	var t = document.getElementById("tfixa").value;
+  	if (t.search("-") == -1) { t = t.replace(/[^\d]/g, "") / 100; } else if (t === "-0,0") { t = 0; } else t = (-1 * t.replace(/[^\d]/g, "") ) / 100;
+  	document.getElementById("tfixa").value = t.toLocaleString("pt-PT", {minimumFractionDigits:2, maximumFractionDigits:2});
+
+  	document.getElementById("pfixa").innerHTML = presta30(f,txfixa).toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + " euros";
+  	document.getElementById("delta").innerHTML = ( presta30(f,txfixa) - presta30(f,txindexada) ).toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + " euros";
+
+  	document.getElementById("pfixa2").innerHTML = presta30(f,t/100+spread).toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + " euros";
+  }
+  </script>
+
+
+<table>
+<caption><strong> Crédito habitação à taxa fixa</strong> Entre as nove instituições financeiras que oferecem crédito habitação a 30 anos à taxa fixa, o Bankinter e a Caixa Geral de Despósitos são os que apresentam a TAEG mais baixa do mercado para um financiamento de 100 mil euros.</caption>
+<thead>
+<tr><td><td>TAN<td>TAEG
+<tbody>
+<tr><td>Bankinter*<td>1,65%<td>2,5%
+<tr><td>CGD<td>2,48%<td>3,1%
+<tr><td>Novo Banco<td>2,43%<td>3,4%
+<tr><td>Banco Best<td>2,43%<td>3,4%
+<tr><td>Novo Banco Açores<td>2,43%<td>3,4%
+<tr><td>UCI<td>2,65%<td>3,47%
+<tr><td>Banco BPI<td>2,5%<td>3,50%
+<tr><td>Banco CTT<td>2,05%<td>3,50%
+<tfoot>
+<tr><td colspan="3">Fonte: 11 de Março de 2022. TAN = Taxa anual nominal. TAEG = Taxa anual de encargos efetiva global. Simulação para um crédito a 100 mil euros a 30 anos à taxa fixa. *A oferta do Bankinter de taxa fixa a 30 anos do Bankinter pressupõe a celebração de um contrato a 31 anos, sendo o último ano indexado à Euribor a 12 meses. A oferta do Abanca não é aqui apresentada porque não tem simulador disponível no seu sítio.
+</table>
+
+
+<h3>Os prós e contras da taxa fixa</h3>
+
+<p>Em julho do ano passado, no <a href="https://clientebancario.bportugal.pt/pt-pt/publicacao/relatorio-de-acompanhamento-dos-mercados-bancarios-de-retalho-2020">Relatório de Acompanhamento dos Mercados Bancários de Retalho</a>, o Banco de Portugal revelava que, em 2020, os contratos de crédito habitação com taxa fixa representaram 5,7% do número de empréstimos à habitação celebrados e 5% do montante de crédito concedido (que compara com 3,3% e 2,8% em 2019, respetivamente).
+
+<p>Apesar de ainda agregarem uma fatia muito reduzida do mercado, os contratos de crédito habitação com taxa fixa estão a ganhar tração. E não é somente por a taxa fixa ser vista como uma forma de garantir estabilidade financeira ao longo de todo o contrato, pois a prestação a pagar ao banco todos os meses será sempre a mesma. O crédito habitação à taxa fixa ficou também mais barato.
+
+<p>Em março de 2018, por exemplo, a taxa <em>swap</em> do Euro a 30 anos, que serve de referência aos contratos de taxa fixa, estava a negociar acima dos 1,5%. Atualmente está nos 0,7%. Isto significa que, nos últimos quatro anos, o preço para fixar o crédito habitação caiu para mais de metade.
+
+<p>A contratualização de um empréstimo à habitação à taxa fixa revela-se num negócio bastante tentador para quem hoje quer comprar casa nova. Porém, pode não ser a solução indicada para todos.
+
+<p>A começar por todos aqueles que acreditam que a Euribor a 12 meses não ultrapassará a barreira de 1,1% (valor que hoje faz com que a prestação da casa seja igual num contrato à taxa fixa e à taxa variável).
+
+<p>A taxa fixa também não será a solução mais indicada para quem hoje procure a prestação mais baixa do mercado. Se por um lado o crédito habitação com taxa fixa permite não estar exposto ao risco das oscilações futuras da taxa de juro, é natural que, no início do empréstimo, a prestação conferida pela taxa fixa seja superior à praticada por um empréstimo à taxa variável. É o prémio a pagar no curto prazo para ter tranquilidade na carteira no longo prazo.
+
+<p>Além disso, os contratos à taxa fixa têm uma comissão de amortização antecipada do capital de 2%, enquanto nos contratos à taxa variável essa comissão é de 0,5%. Para quem preveja reduzir a dívida ao longo do período do contrato, esta diferença pode fazer uma grande diferença no resultado final.
+
+<p>Outra diferença que deve ser ponderada na hora de optar pela taxa fixa ou pela taxa variável é a margem financeira que cada um dos contratos oferece.
+
+<p>Entre os vários indicadores exigidos pelo Banco de Portugal aos bancos para estes garantirem uma concessão de crédito prudente, os clientes têm de apresentar um <a href="https://www.bportugal.pt/page/limites-ao-racio-ltv-ao-dsti-e-maturidade">DSTI (<em>debt service-to-income ratio</em>)</a> não superior a 50%. Isto significa que para uma família obter um crédito, o total das prestações mensais de todos os empréstimos detidos pelo agregado familiar não pode ser superior a 50% do seu rendimento mensal líquido.
+
+<p>Para efeitos do cálculo do DSTI nos empréstimos à habitação de taxa variável a mais de 10 anos, os bancos devem considerar um aumento de 3 pontos percentuais da taxa Euribor – algo que não acontece nos contratos de taxa fixa, porque nestes casos não há lugar a alterações da taxa de juro ao longo do contrato. Desta forma, é possível obter um valor de empréstimo superior contratando um crédito habitação de taxa fixa face a um com taxa variável.
+
+<h3>Para onde vai a Euribor do meu crédito habitação?</h3>
+
+<p>O Banco Central Europeu (BCE) tem como missão manter a taxa de inflação na Zona Euro, no médio prazo, nos 2%. A autoridade monetária da moeda única intervém fundamentalmente no mercado com esse objetivo. Hoje, com a inflação a situar-se muito para lá deste valor (5,8% em março) é espectável que, em breve, venha a rever em alta a taxa de referência do euro.
+
+<p>De acordo com um inquérito realizado pela <cite>Reuters</cite> a <a href=" https://www.reuters.com/world/europe/ecb-raise-deposit-rate-025-by-year-end-2022-02-15/">15 de Fevereiro</a> junto de vários economistas, a maioria apontava para que o BCE pudesse aumentar a taxa de depósito (atualmente nos -0,25%) no segundo semestre e não em 2023, como anteriormente se esperava.
+
+<p>Com a invasão da Ucrânia por parte da Rússia a 24 de fevereiro, muitos analistas antecipam que o BCE possa atrasar um pouco a subida das taxas de juro, para apoiar a economia europeia que está a ser fortemente penalizada por este conflito militar. Todavia, não poderá adiar muito mais tempo, dado que a taxa de inflação, pressionada pela subida dos preços da energia, está a bater novos recordes a cada mês que passa.
+
+<p>Joachim Nagel, governador do Bundesbank, em entrevista ao jornal alemão <cite>Die Zeit</cite> <a href="https://www.zeit.de/2022/07/joachim-nagel-infation-energiepreise-geldpolitik">disse</a>:
+
+  <blockquote>
+  <p>“Se o quadro (da inflação) se mantiver inalterado em março, serei a favor da normalização da política monetária.”
+  </blockquote>
+
+  <p> E acrescentou:
+
+  <blockquote>
+  <p>“O primeiro passo é descontinuar as compras líquidas de ativos ao longo de 2022. Depois as taxas de juro poderão ser aumentadas antes do fim deste ano.”
+  </blockquote>
+
+<p>Os mercados já há muito que estão a antever uma subida das taxas de juro por parte do BCE. Tomando como referência o comportamento das taxas <em>swap</em> do euro, verifica-se que os investidores estão não apenas a contar que no espaço de dois anos a taxa Euribor a 12 meses esteja a cotar acima dos 0% como supere a barreira de 1% em menos de 15 anos.
+
+<p>Há um ano, segundo dados publicados no sítio  do banco austríaco <a href="https://produkte.erstegroup.com/CorporateClients/en/MarketsAndTrends/Fixed_Income/Capital_markets_derivatives/index.phtml">ERST Group</a>, as taxas <em>swap</em> do euro de todas as maturidades (entre 1 a 30 anos) estavam a cotar abaixo da linha de água. Atualmente, apenas a maturidade mais reduzida (1 ano) está no vermelho.
+
+  <aside>
+  <table>
+  <caption><strong>Taxa Euribor a 12 meses</strong> Desde que foi criada a 1 de Janeiro de 1999, a taxa média da Euribor a 12 meses é de 1,78%. Nestes 23 anos, apenas nos últimos nove esteve abaixo de 1%. </caption>
+
+  <thead>
+  <tr><td rowspan=“1”>Ano<td colspan=“1”>Euribor a 12 meses<td colspan=“1”>
+  <tbody>
+  <tr><td>1999<td>3,18%<td>
+  <tr><td>2000<td>4,79%<td>
+  <tr><td>2001<td>4,09%<td>
+  <tr><td>2002<td>3,49%<td>
+  <tr><td>2003<td>2,33%<td>
+  <tr><td>2004<td>2,27%<td>
+  <tr><td>2005<td>2,34%<td>
+  <tr><td>2006<td>3,44%<td>
+  <tr><td>2007<td>4,45%<td>
+  <tr><td>2008<td>4,83%<td>
+  <tr><td>2009<td>1,61%<td>
+  <tr><td>2010<td>1,35%<td>
+  <tr><td>2011<td>2,01%<td>
+  <tr><td>2012<td>1,11%<td>
+  <tr><td>2013<td>0,54%<td>
+  <tr><td>2014<td>0,48%<td>
+  <tr><td>2015<td>0,17%<td>
+  <tr><td>2016<td>-0,04%<td>
+  <tr><td>2017<td>-0,15%<td>
+  <tr><td>2018<td>-0,17%<td>
+  <tr><td>2019<td>-0,22%<td>
+  <tr><td>2020<td>-0,36%<td>
+  <tr><td>2021<td>-0,49%<td>
+  <tr><td>3 de Março 2022<td>-0,38%<td>
+  <tfoot>
+  <tr><td colspan="7">Fonte: Global-Rates.com.
+  </table>
+  </aside>
+
+<p>A Euribor a 12 meses, a taxa mais utilizada nos novos contratos de empréstimo à habitação, começou o ano a cotar nos -0,5% e, em apenas dois meses, chegou a cotar nos -0,28%. Hoje está nos -0,38%.
+
+<p>O consenso entre os analistas é que nos próximos meses a taxa deverá passar a linha de água. É preciso recuar a janeiro de 2016 para ver a Euribor a 12 meses acima dos 0%.
+
+<p>Os analistas do <a href="https://www.caixabankresearch.com/en/indicators-and-forecasts/macroeconomics">CaixaBank</a> (donos do Banco BPI), por exemplo, antecipam que já no próximo ano a Euribor a 12 meses esteja nos 0,14%.
+
+<p>Nos últimos três anos foram muitas as vozes a referirem-se a este período de taxas negativas como o “novo normal”. Muitos vaticinaram mesmo que seria de esperar uma continuidade eterna desta realidade.
+
+<p>Do ponto de vista económico, é irracional o conceito de taxas de juro negativas. Afinal, não faz sentido o banco pagar-nos para nos emprestar dinheiro. Por isso, parece-me que o chamado “novo normal”, que dura desde 2016, terá os dias contados. E não será apenas por uma questão de intuição que o afirmo.
+
+<p>A subida as taxas Euribor não é mais uma incógnita. Todos os indicadores levam a antever que em breve as taxas vão subir. É isso que também mostram <em>forward rate agreements</em>. Estes contratos financeiros, negociados em mercado secundário, permitem a fixação de uma taxa de juro no futuro e são utilizados pelos profissionais para antecipar as oscilações das taxas de juro no longo prazo.
+
+<p>Atualmente, os <em>forward rate agreements</em> sobre a Euribor a 6 meses (outro indexante utilizando nos empréstimos à habitação a taxa variável) apontam para que a taxa possa oscilar entre os 0% e os 0,43% em 2023 e que nos próximos sete anos esteja a negociar acima de 1%.
+
+<p>É impossível antecipar uma data de quando o BCE irá mexer nas taxas de juro ou prever o dia em que as Euribor passarão a cotar a taxas positivas. E tão pouco de como será o comportamento dessas taxas ao longo de um período tão longínquo como 30 anos. Mas o mercado diz-nos que não só o tempo das taxas negativas está por um fio, como a oferta dos bancos ao nível dos contratos de taxa fixa nunca esteve tão apelativa.
+
+
+  </article>
+  </body>
+  </html>

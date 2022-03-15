@@ -3,23 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A missão do Prospera é ajudar os portugueses a gerir as suas finanças pessoais. São ideias para ganhar dinheiro.">
+<meta name="keywords" content="finanças pessoais, dinheiro, investir, prospera">
+<meta name="author" content="David Almas">
+<link rel="stylesheet" href="/0/0.css">
 <link rel="icon" href="/0/fav.svg">
+<script src="/0/log.js" defer></script>
+<script src="/0/pub.js" defer></script>
 <style>
-body { background-color:#111; color: #eee; font-family:sans-serif; line-height:1.7; margin:0; padding:0 }
-.logo { width:19em; fill:#00c000 }
-article { position:absolute; top:calc(50% - 6em); left:calc(50% - 9.5em); width:19em; }
-p { text-align:center }
-a, a:visited { color:#00c000 }
-a:hover { text-decoration:none }
+section { padding:2em 0 }
+h3 { margin-top:0}
+h3 a { text-decoration:none }
+hr { border:0; margin:4em 0 0 }
+.seta { text-decoration:none }
+.seta:hover { font-weight:700 }
+.logo { fill:var(--claro-cor) }
+@media (prefers-color-scheme:dark) { .logo { fill:var(--escuro-cor) } }
 </style>
-<title>Prospera</title>
+<title>Prospera — Ideias para Ganhar Dinheiro</title>
 </head>
 <body>
 <article>
-<p><svg class="logo" viewBox="0 0 300 45"><path d="M0 43.367V.585h18.466q4.763 0 8.335 1.88 3.572 1.88 5.557 5.285 1.985 3.405 1.985 7.959 0 4.596-2.047 7.959-2.026 3.363-5.703 5.181-3.656 1.817-8.544 1.817H7.019v-9.024h8.69q2.047 0 3.489-.71 1.462-.731 2.235-2.068.794-1.337.794-3.154 0-1.838-.794-3.133-.773-1.316-2.235-2.005-1.441-.71-3.489-.71h-4.094v33.507zm35.599 0V.585h18.466q4.763 0 8.335 1.734 3.572 1.734 5.557 4.993 1.985 3.259 1.985 7.813 0 4.596-2.047 7.75-2.026 3.154-5.703 4.763-3.656 1.608-8.544 1.608h-11.03v-9.024h8.69q2.047 0 3.489-.501 1.462-.522 2.235-1.65.794-1.128.794-2.945 0-1.838-.794-2.987-.773-1.17-2.235-1.713-1.441-.564-3.489-.564h-4.094v33.507zm25.068-19.636l10.695 19.636H58.745L48.3 23.731zm52.645-1.755q0 7.144-2.778 12.053-2.778 4.888-7.499 7.416-4.721 2.507-10.528 2.507-5.849 0-10.57-2.528-4.7-2.549-7.478-7.437Q71.7 29.078 71.7 21.976q0-7.144 2.757-12.032 2.778-4.909 7.478-7.416Q86.657 0 92.506 0q5.807 0 10.528 2.528 4.721 2.507 7.499 7.416 2.778 4.888 2.778 12.032zm-11.949 0q0-3.844-1.024-6.476-1.003-2.653-2.987-4.011-1.964-1.379-4.846-1.379-2.883 0-4.867 1.379-1.964 1.358-2.987 4.011-1.003 2.632-1.003 6.476 0 3.844 1.003 6.497 1.024 2.632 2.987 4.011 1.985 1.358 4.867 1.358 2.883 0 4.846-1.358 1.985-1.379 2.987-4.011 1.024-2.653 1.024-6.497zm37.355-8.022q-.167-2.089-1.567-3.259-1.379-1.17-4.199-1.17-1.797 0-2.945.439-1.128.418-1.671 1.149-.543.731-.564 1.671-.042.773.272 1.4.334.606 1.044 1.107.71.48 1.817.877 1.107.397 2.632.71l3.509.752q3.551.752 6.079 1.985 2.528 1.232 4.136 2.904 1.608 1.65 2.361 3.718.773 2.068.794 4.512-.021 4.22-2.11 7.144-2.089 2.925-5.974 4.449-3.865 1.525-9.296 1.525-5.578 0-9.735-1.65-4.136-1.65-6.434-5.076-2.277-3.447-2.298-8.815h11.03q.104 1.964.982 3.301.877 1.337 2.465 2.026 1.608.689 3.823.689 1.859 0 3.113-.46 1.253-.46 1.901-1.274.648-.815.668-1.859-.021-.982-.648-1.713-.606-.752-2.005-1.337-1.4-.606-3.781-1.128l-4.261-.919q-5.682-1.232-8.962-4.115-3.259-2.904-3.238-7.917-.021-4.073 2.173-7.123 2.214-3.071 6.121-4.784Q127.876 0 132.952 0q5.181 0 8.962 1.734 3.781 1.734 5.828 4.888 2.068 3.133 2.089 7.332zm13.122 29.413V.585h18.466q4.763 0 8.335 1.88 3.572 1.88 5.557 5.285 1.985 3.405 1.985 7.959 0 4.596-2.047 7.959-2.026 3.363-5.703 5.181-3.656 1.817-8.544 1.817h-11.03v-9.024h8.69q2.047 0 3.489-.71 1.462-.731 2.235-2.068.794-1.337.794-3.154 0-1.838-.794-3.133-.773-1.316-2.235-2.005-1.441-.71-3.489-.71h-4.094v33.507zm35.6 0V.585h30.833v9.359h-19.218v7.353h17.631v9.359h-17.631v7.353h19.135v9.359zm33.594 0V.585H239.5q4.763 0 8.335 1.734 3.572 1.734 5.557 4.993 1.985 3.259 1.985 7.813 0 4.596-2.047 7.75-2.026 3.154-5.703 4.763-3.656 1.608-8.544 1.608h-11.03v-9.024h8.69q2.047 0 3.489-.501 1.462-.522 2.235-1.65.794-1.128.794-2.945 0-1.838-.794-2.987-.773-1.17-2.235-1.713-1.441-.564-3.489-.564h-4.094v33.507zm25.068-19.636l10.695 19.636H244.18l-10.445-19.636z"/><path d="M268.415 43.367h-12.534L270.002.585h15.876L300 43.367h-12.534l-9.359-31h-.334z"/></svg>
-<p>As suas finanças pessoais mudarão em breve.
-<p><a href="mailto:correio@prospera.pt">correio@prospera.pt</a>
-<p><img src="https://api.countapi.xyz/hit/pteste/conta?img" alt="" style="opacity:1%">
+<p id="logo"><a href="/">Prospera</a>
+
+<section>
+<h1><a href="/z/gasolina/">Gasóleo na estratosfera. Controle a subida no seu orçamento</a></h1>
+<p>Por <a href="/sobre/#david">David Almas</a> a 15 de março de 2022
+<h2>O preço do gasóleo subiu 23% desde o início de 2022. A gasolina escalou 17%. Se não pode trocar o carro ou a mota por umas sapatilhas ou uma bicicleta, temos 16 ideias para minimizar o impacto da apreciação dos combustíveis no seu dinheiro. <a href="/z/gasolina/" class="seta">⟶</a></h2>
+</section>
+
+<section>
+<p class="data">15 de março de 2022
+<h3><a href="#20220315" id="20220315">Criptomilionários? São mais os que perdem</a></h3>
+<p>Muitos pensam que investir em Bitcoins é um bom caminho para a fortuna. Não tem sido assim: 55% das pessoas que compraram esse criptoativo estavam a perder dinheiro no início de fevereiro passado, segundo uma investigação da 21Shares. Eli Ndinga, diretor de estudos da companhia, <a href="https://money.com/bitcoin-crypto-losses-2022/">explicou</a> ao Rob Curran da <cite>Money</cite> que conseguem analisar todas as compras de Bitcoins e os respetivos preços, porque a cadeia de blocos é pública.
+<p>O Bitcoin, que chegou a custar mais de 58 mil euros no início de novembro de 2021, vale agora cerca de 35 mil euros, menos 40% em 4 meses. <a href="/sobre/#david" class="assina">DA</a>
+</section>
+
+<section>
+<p class="data">14 de março de 2022
+<h3><a href="#20220314" id="20220314">Insónias: elas dão cabo dos seus investimentos</a></h3>
+<p>Tem dormido bem ultimamente? Se tem sido assaltado por insónias é muito provável que tenha cometido vários erros na tomada de decisões, nomeadamente no campo dos seus investimentos, em virtude de a sua capacidade de concentração estar fortemente afetada pela privação do sono. 
+<p>Num artigo <a href="https://www.tandfonline.com/doi/abs/10.1080/1351847X.2020.1857289">publicado</a> em 2020 no <cite>The European Journal of Finance</cite>, <a href="https://www.napier.ac.uk/people/antonios-siganos">Antonios Siganos</a>, professor na Edinburgh Napier University, revelou que os resultados obtidos no mercado acionista são bastante mais baixos nos dias em que os investidores dormem pouco. Segundo o académico, “por cada 1% de aumento diário das dificuldades de sono, os retornos caem 0,14%”.
+<p>No arranque da Semana de Consciência do Sono, que tem como ponto alto a celebração do Dia Mundial do Sono a <a href="https://worldsleepday.org">18 de março</a>, aproveite para cuidar do seu sono para não prejudicar a sua saúde e a sua carteira. Fazer exercício físico e definir uma hora para ir dormir e acordar são apenas duas dicas sugeridas pela <a href="https://www.apsono.com/pt/">Associação Portuguesa de Sono</a> para dormir melhor. <a href="/sobre/#luis" class="assina">LL</a>
+</section>
+    
+<section>
+<h1><a href="/z/guerra/">A guerra atingiu a sua carteira? Saiba o que (não) fazer agora</a></h1>
+<p>Por <a href="/sobre/#david">David Almas</a> a 12 de março de 2022
+<h2>Se está no grupo dos investidores, provavelmente não deve mudar nada na sua estratégia nos mercados financeiros. Se especula, não encontrará respostas neste artigo. <a href="/z/guerra/" class="seta">⟶</a></h2>
+</section>
+
+
+<section>
+<p class="data">12 de março de 2022
+<h3><a href="#20220312" id="20220312">Como a Ikea conduz os clientes a mais despesas</a></h3> 
+<p>Zachary Crockett revela muitos truques que a Ikea usa para os clientes saírem das suas lojas com mais móveis e menos dinheiro. O artigo do <cite>The Hustler</cite> <a href="https://thehustle.co/how-ikea-tricks-you-into-buying-more-stuff/">elenca</a> as principais artimanhas. A maior é, talvez, o caminho predefinido que os clientes seguem pela loja: expõem-se a todo o catálogo e criam uma falsa sensação de escassez dos produtos.
+<p>Cerca de 60% das compras na Ikea são por impulso. Na próxima visita à loja, leve uma lista fixa de compras. <a href="/sobre/#david" class="assina">DA</a>
+</section>
+
+
+<section>
+<h1><a href="/z/credito-habitacao/">Crédito habitação agora só com taxa fixa</a></h1>
+<p>Por <a href="/sobre/#luis">Luís Leitão</a> a 11 de março de 2022
+<h2>Fixar a prestação da casa para sempre pode ser a melhor decisão financeira da sua vida. Hoje, o prémio a pagar para nunca mais se preocupar com as oscilações da taxa de juro é inferior a 1,5%, e pode ser nulo num abrir e fechar de olhos. <a href="/z/credito-habitacao/" class="seta">⟶</a></h2>
+</section>
+  
+
+<section>
+<p class="data">9 de março de 2022
+<h3><a href="#20220309" id="20220309">O vinil está vivo e recomenda-se</a></h3>
+<p>No último ano, a venda de discos em vinil cresceu 61% para mais de mil milhões de dólares, só nos EUA. A última vez que esta barreira foi cruzada foi em 1986, <a href="https://variety.com/2022/music/news/vinyl-sales-riaa-revenue-2021-year-end-1235199997/">revela</a> a <cite>Variety</cite>.
+<p>Apesar de o vinil representar apenas 7% dos 15 mil milhões de dólares de receitas geradas pela indústria da música no último ano por terras do Tio Sam, foi o 15.º ano consecutivo que as vendas dos eternos LP (<em>long play</em>) registaram uma subida.
+<p>A pujança do vinil não é uma realidade circunscrita aos EUA. No Reino Unido, por exemplo, foram vendidos mais de 5 milhões de LP no último ano, mais 8% do que em 2020. Segundo a <a href="https://www.bpi.co.uk/news-analysis/2021-in-music-vinyl-cassettes-continue-surge/">British Phonographic Industry</a>, foi o 14.º ano consecutivo de crescimento das vendas de discos em vinil e um marco recorde em 30 anos.
+<p>Em Portugal não há dados sobre o mercado. Tanto a Audiogest como a Associação Fonográfica Portuguesa não têm registos das vendas de vinis de grande parte das editoras independentes e das lojas <em>online</em>. 
+<p>Mas não é difícil antever que a popularidade do vinil por cá tenha acompanhado de perto o que se passa nos EUA e no Reino Unido. No ano passado, por exemplo, abriu na Maia a <a href="https://www.grama.pt/">Grama Pressing</a>, a primeira fábrica de prensagem de vinil em Portugal em muitos anos, e outras já <a href="https://artesonora.pt/breves/empresa-checa-de-prensagem-de-discos-de-vinil-quer-entrar-no-mercado-portugues/">mostraram</a> interesse em investir no território nacional. 
+<p>Quer seja um melómano e fã incondicional do vinil quer tenha herdado uma coleção extraordinária de discos, o ressurgimento do vinil é música para os seus ouvidos. Mais ainda quando alguns especialistas estimam que a indústria do vinil possa crescer, em média, <a href="https://www.researchandmarkets.com/reports/5008947/global-vinyl-records-market-2021-2025">6% por ano</a>, entre 2021 e 2025. <a href="/sobre/#david" class="assina">LL</a>
+</section>
+  
+
+<section>
+<p class="data">2 de março de 2022
+<h3><a href="#20220302" id="20220302">IRS. Eleja já a entidade a consigar</a></h3>
+<p>A autoridade fiscal permite a indicação antecipada da instituição a quem quer consignar 0,5% do próximo IRS liquidado. Basta 1 minuto: vá à página da <a href="https://irs.portaldasfinancas.gov.pt/dadosagregadoirs/consignacao/comunicar">comunicação de entidade a consigar</a> do Portal das Finanças e pesquise a instituição com fins sociais, religiosos, ambientais ou culturais pela sua designação ou número de contribuinte. Pode finalizar esta comunicação até ao dia 31 de março.
+
+<p>Há 4561 entidades na lista do fisco. Se não sabe qual escolher, sugerimos a <a href="https://www.unicef.pt/">Unicef Portugal</a> (oficialmente Comité Português para a Unicef — Fundo das Nações Unidas para a Infância), cujo número de contribuinte é o 500&nbsp;883&nbsp;823. A Unicef é o braço das Nações Unidas que protege as crianças em todo o mundo.
+
+<p>A consignação de IRS não representa um custo para os contribuintes; a entrega à entidade eleita sai dos cofres das Finanças. A consignação do IVA significa uma despesa fiscal, porque o contribuinte dá o seu benefício fiscal associado ao pedido de faturas ao longo de 2021. <a href="/sobre/#david" class="assina">DA</a>
+</section>
+
+
+<section>
+<h1><a href="/z/manifesto/">Manifesto editorial</a></h1>
+<p>Por <a href="/sobre/#david">David Almas</a> e <a href="/sobre/#luis">Luís Leitão</a> a 1 de março de 2022
+<h2>Bem-vindos ao Prospera. A nossa missão é ajudar os portugueses a gerir as suas finanças pessoais. Este é o nosso compromisso perante a sociedade portuguesa. <a href="/z/manifesto/" class="seta">⟶</a></h2>
+</section>
+
 </article>
 </body>
 </html>

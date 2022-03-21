@@ -23,7 +23,8 @@ var keys = Object.keys(conta);
 var d;
 
 for (key in keys) {
-	txt += new Intl.DateTimeFormat('pt-PT', {dateStyle:'short',timeStyle:'short'}).format(keys[key] * 1) + " " + conta[keys[key]] + "<br>";
+	if(key != 0) { 
+		txt += new Intl.DateTimeFormat('pt-PT', {dateStyle:'short',timeStyle:'short'}).format(keys[key] * 1) + " " + conta[keys[key]] + " " + (parseInt(conta[keys[key]],10) - parseInt(conta[keys[key-1]],10) ) + "<br>"; }
 }
 
 document.getElementById('conta').innerHTML = txt;

@@ -91,7 +91,7 @@ function calc() {
 	var custo = document.getElementById("custo").value.replace(/[^\d]/g, "") * 1;
 	document.getElementById("custo").value = custo.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0});	
 
-	var quilo = custo * 100 / ( cgas * (pgas - pgpl));
+	var quilo = custo * 100 / ( cgas * (pgas - 1.25 * pgpl));
 	document.getElementById("quilo").innerHTML = quilo.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + " quilómetros";
 }
 </script>

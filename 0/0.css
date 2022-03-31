@@ -17,9 +17,9 @@ header svg { height:2em; fill:var(--cor) }
 header nav { display:flex; flex-flow:row wrap }
 header nav ul { margin:0; padding:0; overflow:hidden; font-variant:all-small-caps; display:flex }
 header nav ul li { list-style-type:none }
-header nav ul li a, nav ul li form { display:inline-block; color:var(--fundo); background-color:var(--forte); padding:.3em .7em; text-decoration:none }
+header nav ul li a, header nav ul li a:visited, nav ul li form { display:inline-block; color:var(--fundo); background-color:var(--forte); padding:.3em .7em; text-decoration:none }
 header nav ul li a:hover { background-color:var(--cor) }
-header nav ul:nth-child(2) li a, nav ul:nth-child(2) li form  { color:var(--cor); background-color:var(--fundo) }
+header nav ul:nth-child(2) li a, header nav ul:nth-child(2) li a:visited, nav ul:nth-child(2) li form  { color:var(--cor); background-color:var(--fundo) }
 header nav ul:nth-child(2) li a:hover { background-color:var(--fundo); color:var(--forte)}
 header nav ul:nth-child(2) li:last-child { display:none }
 header nav ul li input { width:11em; text-align:left }
@@ -28,7 +28,7 @@ footer { margin-top:3em; padding:1.5em; background-color:var(--forte); color:var
 footer svg { height:2em; fill:var(--fundo) }
 footer nav { display:flex; flex-flow:row wrap; justify-content:space-between }
 footer nav ul { margin:0 0 2em; padding:0 ; overflow:hidden; font-variant:all-small-caps; display:flex; flex-flow:column wrap }
-footer nav ul li a { display:block; color:var(--fundo); background-color:var(--forte); padding:.3em .7em; text-decoration:none }
+footer nav ul li a, footer nav ul li a:visited { display:block; color:var(--fundo); background-color:var(--forte); padding:.3em .7em; text-decoration:none }
 footer nav ul li a:hover { background-color:var(--fundo); color:var(--forte) }
 footer img { opacity:2% }
 
@@ -40,7 +40,7 @@ h3 { margin-top:3em; line-height:1 }
 section h3 { margin-top:0}
 section h3 a { text-decoration:none }
 h4 { font-variant:all-small-caps; font-size:1em; line-height:1; margin:3em 0 -.5em }
-h4 a { text-decoration:none }
+h4 a, h4 a:visited { text-decoration:none }
 h4 a:hover { color:var(--cor) }
 
 blockquote { font-weight:700 }
@@ -72,12 +72,12 @@ h1 + ul li:last-child { padding-bottom:0 }
 a.soc svg { fill:var(--forte); height:1.3em; width:1.3em; padding:.2em; border-radius:50%; border:.2em solid var(--forte) }
 a.soc svg:hover { fill:var(--fundo); background-color:var(--forte) }
 
-.seta { text-decoration:none }
+.seta, .seta:visited { text-decoration:none }
 .seta:hover { color:var(--cor) }
 
 .data { color:var(--forte); margin-top:3em }
 
-.assina { color:var(--fundo); background-color:var(--forte); padding:.2em .3em; font-size:.8em; font-weight:700; text-decoration:none }
+.assina, .assina:visited { color:var(--fundo); background-color:var(--forte); padding:.2em .3em; font-size:.8em; font-weight:700; text-decoration:none }
 .assina:hover { background-color:var(--cor) }
 
 @media print {

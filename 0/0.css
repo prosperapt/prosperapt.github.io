@@ -1,34 +1,51 @@
-:root { --claro-cor:#222; --claro-fundo:#fff; --claro-forte:#006400; --escuro-cor:#eee; --escuro-fundo:#111; --escuro-forte:#00c000 }
+:root { --cor:#222; --fundo:#fff; --forte:#006400 }
 
-@font-face { font-family:'Inter'; font-style:normal; font-weight:700; src:url('/0/inter.woff2') format('woff2'); font-display:swap }
+@media (prefers-color-scheme:dark) { :root { --cor:#d3d3d3; --fundo:#111; --forte:#00B000 } }
 
-body { font-size:1.1em; font-family:sans-serif; line-height:1.7; margin: 0 auto; max-width:30em; color:var(--claro-cor); background-color:var(--claro-fundo) }
+@font-face { font-family:'Inter'; font-style:normal; font-weight:700; src:url('inter.woff2') format('woff2'); font-display:swap }
 
-a, a:visited { color:var(--claro-forte) }
+body { font-size:1.1em; font-family:sans-serif; line-height:1.7; margin: 0 auto; padding:0 .2em; max-width:30em; color:var(--cor); background-color:var(--fundo) }
+
+a, a:visited { color:var(--forte) }
 a:hover { text-decoration:none }
 
-header { display:flex; margin: 1.5em 0; font-size:.875em }
-header span small { float:left; display:block; transform:rotate(-90deg); font-size:.65em; margin: .5em 0 0 }
-header img { margin:0 1em 0 0; width:160px; height:120px; border:0 }
+header figure { display:inline-block; margin:1em 0; font-size:.9em }
+header figure img { float:left; padding:0 1em .3em 0 }
+header figure figcaption p { margin:0; padding:0 }
+header figure figcaption p:first-child { font-size:.7em }
+header svg { height:2em; fill:var(--cor) }
+header nav { display:flex; flex-flow:row wrap }
+header nav ul { margin:0; padding:0; overflow:hidden; font-variant:all-small-caps; display:flex }
+header nav ul li { list-style-type:none }
+header nav ul li a, nav ul li form { display:inline-block; color:var(--fundo); background-color:var(--forte); padding:.3em .7em; text-decoration:none }
+header nav ul li a:hover { background-color:var(--cor) }
+header nav ul:nth-child(2) li a, nav ul:nth-child(2) li form  { color:var(--cor); background-color:var(--fundo) }
+header nav ul:nth-child(2) li a:hover { background-color:var(--fundo); color:var(--forte)}
+header nav ul:nth-child(2) li:last-child { display:none }
+header nav ul li input { width:11em; text-align:left }
 
-article { margin:1em auto; max-width:30em }
+footer { margin-top:3em; padding:1.5em; background-color:var(--forte); color:var(--fundo); display:flex; flex-direction: column }
+footer svg { height:2em; fill:var(--fundo) }
+footer nav { display:flex; flex-flow:row wrap; justify-content:space-between }
+footer nav ul { margin:0 0 2em; padding:0 ; overflow:hidden; font-variant:all-small-caps; display:flex; flex-flow:column wrap }
+footer nav ul li a { display:block; color:var(--fundo); background-color:var(--forte); padding:.3em .7em; text-decoration:none }
+footer nav ul li a:hover { background-color:var(--fundo); color:var(--forte) }
+footer img { opacity:2% }
 
-footer { margin:3em 0 0; padding:1.5em 1.5em 1em; max-width:30em; background-color:var(--claro-forte); color:var(--claro-fundo); display:grid; grid-template-columns:50% 50% }
-footer img { opacity:1% }
-footer a, footer a:visited { text-decoration:none; color:var(--claro-fundo) }
-footer a:hover { text-decoration:underline }
+section { margin-top:2em }
 
-h1 { font-size:3.75em; line-height:1; font-family:'Inter'; font-weight:700; letter-spacing:-0.03em; margin:.5em 0 }
-
-h2 { font-size:1.25em; line-height:1.5; font-weight:400; letter-spacing:-0.02em; border-left:.3em solid var(--claro-forte); padding-left:1em; margin:1.5em 0 }
-
+h1 { font-size:3em; line-height:1; font-family:'Inter'; font-weight:700; letter-spacing:-.05em; margin:.5em 0 }
+h2 { font-size:1.2em; font-weight:400; border-left:.3em solid var(--forte); padding-left:1em; margin:1.5em 0 }
 h3 { margin-top:3em; line-height:1 }
-
-ul li { list-style-type:square }
+section h3 { margin-top:0}
+section h3 a { text-decoration:none }
+h4 { font-variant:all-small-caps; font-size:1em; line-height:1; margin:3em 0 -.5em }
+h4 a { text-decoration:none }
+h4 a:hover { color:var(--cor) }
 
 blockquote { font-weight:700 }
 
-table { border-collapse:collapse; margin:3em auto; font-size:.91em }
+table { border-collapse:collapse; margin:3em auto; font-size:.9em }
 table caption strong:first-child { display:block }
 thead { border-bottom:.3em solid }
 td { border-bottom:.1em solid; padding:1em .5em 1em 0; text-align:center; line-height:1; vertical-align:top }
@@ -36,64 +53,35 @@ td:first-child { text-align:left }
 td:last-child { padding:1em 0 }
 tfoot td { border-bottom:0; border-top:.3em solid; line-height:1.5 }
 
-aside { float:right; font-size:.91em; border-left:solid .4em var(--claro-forte); padding:0 0 0 1.5em; margin: .5em 0 1.5em 1.5em; width:calc(50% - 2 * 2em); line-height:1.7 }
-aside p { margin:0 }
+aside { float:right; width:40%; font-size:.9em; border-left:.4em solid var(--forte); padding-left:1em; margin:.5em 0 1.5em 1em;  }
+aside p, aside ul { margin:0 }
 
-input { font-family:inherit; font-size:1em; width:3em; text-align:right; border-width:0 0 .2em; background:none; color:inherit; outline:none; border-bottom-color:var(--claro-forte) }
+input { font-family:inherit; font-size:1em; width:3em; text-align:right; border-width:0 0 .2em; background:none; color:inherit; outline:none; border-bottom-color:var(--forte) }
 
-.logo { height:2em; fill:var(--claro-forte) }
+h1 + ul { margin:0 0 4em; border-left:.4em solid var(--forte); padding: 0; list-style-type:none }
+h1 + ul li { list-style-type:none; padding:0 0 1em 1.5em }
+h1 + ul li:last-child { padding-bottom:0 }
 
-footer .logo { height:1.5em; fill:var(--claro-fundo) }
+.cap:first-letter { float:left; line-height:.7; font-size:3em; font-family:'Inter'; font-weight:700; padding-top:.24em; margin-right:.15em }
 
-.analista { font-size:.91em; border-left:solid .4em var(--claro-forte); padding:0 0 0 1.5em; margin-top:2em }
+.analista { font-size:.9em; border-left:.4em solid var(--forte); padding-left:1em; margin-top:2em }
 
-.cap:first-letter { float:left; line-height:.6; font-size:3.75em; font-family: 'Inter'; font-weight:700; padding-top:.15em; margin-right:.1em }
+.tranca:after { content: 'Λ'; color:var(--fundo); background-color:var(--forte); font-size:.9em; font-weight:700; padding:.2em .3em; margin-left:.2em  }
 
-.tranca { background-color:var(--claro-forte); padding:.2em .25em; color:var(--claro-fundo); margin-left:.25em; font-weight:700; font-size:.91em }
-.tranca:before { content: 'Λ' }
+.partilha { margin:3em 0; display:flex; align-items:center; gap:.3em }
+a.soc svg { fill:var(--forte); height:1.3em; width:1.3em; padding:.2em; border-radius:50%; border:.2em solid var(--forte) }
+a.soc svg:hover { fill:var(--fundo); background-color:var(--forte) }
 
-.assina { background-color:var(--claro-forte); padding:.2em; color:var(--claro-fundo); font-weight:700; font-size:.73em; text-decoration:none }
-.assina:hover { background-color:var(--escuro-fundo); color:var(--escuro-cor) }
+.seta { text-decoration:none }
+.seta:hover { color:var(--cor) }
 
-.data { color:var(--claro-forte) }
+.data { color:var(--forte); margin-top:3em }
 
-.partilha { margin-top:3em; display:flex; align-items:center }
-a.soc svg { fill:var(--claro-forte); height:1.5em; width:1.5em; padding:.2em; margin-left:.4em; border-radius:50%; border:solid .2em var(--claro-forte) }
-a.soc svg:hover { fill:var(--claro-fundo); background-color:var(--claro-forte) }
-
-@media (min-width: 800px) {
-	body { max-width: calc(34em + 160px) }
-	header { float:left; width:160px; text-align:right; flex-direction:column; margin:16em 0 0 }
-	header span small { float:right; transform:none }
-	article { margin:1em 0 1em calc(160px + 4em) }
-	footer { max-width:calc(34em + 160px) }
-}
+.assina { color:var(--fundo); background-color:var(--forte); padding:.2em .3em; font-size:.8em; font-weight:700; text-decoration:none }
+.assina:hover { background-color:var(--cor) }
 
 @media print {
-	header, footer { display:none }
-	article { margin:0; max-width:none }
-	.partilha { display:none }
-}
-
-@media (prefers-color-scheme:dark) {
-	body { background-color:var(--escuro-fundo); color:var(--escuro-cor) }
-
-	h2 { border-left: .3em solid var(--escuro-forte) }
-
-	a, a:visited { color:var(--escuro-forte) }
-	
-	.data { color:var(--escuro-forte) }
-
-	aside, .analista { border-left:solid .4em var(--escuro-forte) }
-
-	input { border-bottom-color:var(--escuro-forte) }
-
-	.logo { fill:var(--escuro-forte) }
-
-	.tranca { background-color:var(--escuro-forte); color:var(--escuro-fundo) }
-	.assina { background-color:var(--escuro-forte); color:var(--escuro-fundo) }
-	.assina:hover { background-color:var(--claro-fundo); color:var(--claro-cor) }
-
-	a.soc svg { fill:var(--escuro-forte); border-color:var(--escuro-forte) }
-	a.soc svg:hover { fill:var(--escuro-fundo); background-color:var(--escuro-forte) } 
+	header, nav, footer, .partilha { display:none }
+	body { max-width:none }
+	article { margin:auto }
 }

@@ -25,7 +25,7 @@ h.innerHTML += "<nav><ul>" +
 	"<li><a href='/planear/'>Planear</a>" +
 	"</ul><ul>" +
 //	"<li><a href='/podcast/'>Podcast</a>" +
-	"<li><a href='/rss/'>RSS</a>" +
+	"<li><a href='/rss.xml'>RSS</a>" +
 	"<li><a href='/sobre/'>Sobre</a>" +
 	"<li><a href='javascript:a();'>🔎</a>" +
 	"<li><form method='get' action='https://duckduckgo.com/'><input type='hidden' name='sites' value='prospera.pt'><input type='hidden' name='k7' value='#ffffff'><input type='hidden' name='k8' value='#222222'><input type='hidden' name='k9' value='#006400'><input type='hidden' name='kx' value='#006400'><input type='hidden' name='kj' value='#006400'><input type='hidden' name='kt' value='p'><input type='text' name='q' id='pesq' placeholder='Procurar' onblur='javascript:b();'></form></ul></nav>";
@@ -40,7 +40,6 @@ const rod = document.createElement("footer");
 	"<li><a href='/planear/'>Planear</a>" +
 	"</ul><ul>" +
 //	"<li><a href='/podcast/'>Podcast</a>" +
-	"<li><a href='/rss/'>RSS</a>" +
 //	"</ul><ul>" +
 	"<li><a href='/sobre/'>Sobre</a>" +
 	"<li><a href='/z/manifesto/'>Manifesto</a>" +
@@ -50,6 +49,7 @@ const rod = document.createElement("footer");
 //	"<li><a href='https://www.facebook.com/prospera.pt'>Facebook</a>" +
 //	"<li><a href='https://www.twitter.com/'>Twitter</a>" +
 //	"<li><a href='https://www.linkedin.com/'>LinkedIn</a>" +
+	"<li><a href='/rss.xml'>RSS</a>" +
 	"<li><a href='https://www.instagram.com/prospera.pt/'>Instagram</a>" +
 	"</ul></nav>" +
 	"<p>A missão do Prospera é ajudar os portugueses a gerir as suas finanças pessoais. Escreva-nos com as suas dúvidas e as suas sugestões para <a href='mailto:correio@prospera.pt' style='color:var(--fundo)'>correio@prospera.pt</a>.";

@@ -25,7 +25,7 @@ h.innerHTML += "<nav><ul>" +
 	"<li><a href='/planear/'>Planear</a>" +
 	"</ul><ul>" +
 //	"<li><a href='/podcast/'>Podcast</a>" +
-//	"<li><a href='/rss/'>RSS</a>" +
+	"<li><a href='/rss/'>RSS</a>" +
 	"<li><a href='/sobre/'>Sobre</a>" +
 	"<li><a href='javascript:a();'>🔎</a>" +
 	"<li><form method='get' action='https://duckduckgo.com/'><input type='hidden' name='sites' value='prospera.pt'><input type='hidden' name='k7' value='#ffffff'><input type='hidden' name='k8' value='#222222'><input type='hidden' name='k9' value='#006400'><input type='hidden' name='kx' value='#006400'><input type='hidden' name='kj' value='#006400'><input type='hidden' name='kt' value='p'><input type='text' name='q' id='pesq' placeholder='Procurar' onblur='javascript:b();'></form></ul></nav>";
@@ -40,7 +40,7 @@ const rod = document.createElement("footer");
 	"<li><a href='/planear/'>Planear</a>" +
 	"</ul><ul>" +
 //	"<li><a href='/podcast/'>Podcast</a>" +
-//	"<li><a href='/rss/'>RSS</a>" +
+	"<li><a href='/rss/'>RSS</a>" +
 //	"</ul><ul>" +
 	"<li><a href='/sobre/'>Sobre</a>" +
 	"<li><a href='/z/manifesto/'>Manifesto</a>" +

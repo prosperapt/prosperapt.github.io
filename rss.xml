@@ -5,7 +5,15 @@
 <link>https://prospera.pt/</link>
 <description>Ideias para Ganhar Dinheiro</description>
 <language>pt-PT</language>
-<atom:link href="https://prospera.pt/rss.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://prospera.pt/rss.xml" rel="self" type="application/rss+xml"/>
+
+<item>
+<title>À procura da melhor proteção contra a inflação</title>
+<link>https://prospera.pt/z/inflacao/</link>
+<guid>https://prospera.pt/z/inflacao/</guid>
+<description>Os fundos de obrigações indexadas à inflação sugerem mais-valias quando os preços dos bens e dos serviços sobem. A realidade não é tão simples: é um xadrez de expectativas.</description>
+<pubDate>08 Apr 2022 08:00:00 +0100</pubDate>
+</item>
 
 <item>
 <title>Herança. Saiba dividir o seu património após a morte</title>

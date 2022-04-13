@@ -19,6 +19,29 @@
 <article>
 
 <section>
+<p class="data">13 de abril de 2022
+<h3><a href="#20220413" id="20220413">Euribor 12 meses positiva</a></h3>
+<p>O zero é uma barreira psicológica dolorosa: as prestações de empréstimos a 30 anos ficarão 7% a 8% mais altas do que há um ano. Se tem um crédito indexado, prepara as suas finanças pessoais para o pior: uma subida da Euribor a 12 meses para <span style="white-space:nowrap"><input type="text" value="5,489" id="e20220413" onkeyup="c20220413()">%</span> representaria um <strong>aumento adicional de</strong> <strong id="a20220413">95%</strong> na prestação de um empréstimo a <input type="text" value="30" id="d20220413" onkeyup="c20220413()"> anos com um <em>spread</em> de <span style="white-space:nowrap"><input type="text" value="1,20" id="s20220413" onkeyup="c20220413()">%</span>. (Mude os números sublinhados para ajustar à sua previsão.<noscript> Infelizmente, o seu programa de navegação não permite interatividade.</noscript>) <a href="/sobre/#david" class="assina">DA</a>
+<script>
+function presta(montante,taxa,anos){ return Math.round( (montante / ((1 - Math.pow(1 + taxa / 12, -(anos * 12))) / (taxa / 12)))); }
+function c20220413() {
+	var e20220413 = document.getElementById("e20220413").value.replace(/[^\d]/g, "") / 1000;
+  	document.getElementById("e20220413").value = e20220413.toLocaleString("pt-PT", {minimumFractionDigits:3, maximumFractionDigits:3});
+
+	var d20220413 = document.getElementById("d20220413").value.replace(/[^\d]/g, "") * 1;
+  	document.getElementById("d20220413").value = d20220413.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0});
+
+	var s20220413 = document.getElementById("s20220413").value.replace(/[^\d]/g, "") / 100;
+  	document.getElementById("s20220413").value = s20220413.toLocaleString("pt-PT", {minimumFractionDigits:2, maximumFractionDigits:2});
+
+	var a20220413 = (presta(100000,(e20220413+s20220413)/100,d20220413) / presta(100000,(0.005+s20220413)/100,d20220413) - 1) * 100;
+
+  	document.getElementById("a20220413").innerHTML = a20220413.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + "%";
+}
+</script>
+</section>
+
+<section>
 <h4><a href="/investir/#estrategia">Estratégia</a></h4>
 <h1><a href="/z/filhos-poupanca/">Crianças. Faça crescer as poupanças dos seus filhos</a></h1>
 <p>Por <a href="/sobre/#luis">Luís Leitão</a> a 11 de abril de 2022
@@ -268,3 +291,4 @@
 </article>
 </body>
 </html>
+

@@ -81,7 +81,7 @@ a.soc svg:hover { fill:var(--fundo); background-color:var(--forte) }
 .assina:hover { background-color:var(--cor) }
 
 @media print {
-	header, nav, footer, .partilha { display:none }
+	header nav, footer, .partilha { display:none }
 	body { max-width:none }
 	article { margin:auto }
 }

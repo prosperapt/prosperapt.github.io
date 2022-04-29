@@ -22,8 +22,8 @@ input[type=range]::-moz-range-thumb { width:2.5em; height:1em; background:#555; 
 <script src="/0/0.js" defer></script>
 <script src="/0/soc.js" defer></script>
 
-<meta name="description" content="">
-<meta name="keywords" content="finanças pessoais, independência financeira, reforma antecipada, ifra, fire">
+<meta name="description" content="A principal meta financeira dos portugueses deveria ser acumular o suficiente para poder deixar de trabalhar. Depois, só deixa a lida profissional quem quer. Saiba quanto precisa de acumular.">
+<meta name="keywords" content="finanças pessoais, independência financeira, reforma antecipada, ifra, fire, financial independence, retire early">
 <meta name="author" content="David Almas">
 <title>Independência financeira e reforma antecipada: o guia para o trabalho ser facultativo — Prospera</title>
 </head>
@@ -40,7 +40,7 @@ input[type=range]::-moz-range-thumb { width:2.5em; height:1em; background:#555; 
 
 <h2>A principal meta financeira dos portugueses deveria ser acumular o suficiente para poder deixar de trabalhar. Depois, só deixa a lida profissional quem quer. Saiba quanto precisa de acumular.</h2>
 
-<p>Por <a href="/sobre/#david">David Almas</a> a 29 de abril de 2022
+<p>Por <a href="/sobre/#david">David Almas</a> a 1 de maio de 2022
 
 <p class="cap">Não é por acaso que a palavra “trabalho” deriva do latim “tripalium”, que significa “tripálio”, um instrumento de tortura usado para forçar os escravos a produzir.
 
@@ -132,8 +132,6 @@ input[type=range]::-moz-range-thumb { width:2.5em; height:1em; background:#555; 
 <p>Entretanto, conta receber, a partir dos <input type="text" value="67" id="f-iss" style="width:2em" onkeyup="i('g-iss', this.value); f();"> anos, uma pensão mensal de <input type="text" value="600" id="f-ss" style="width:5em" onkeyup="i('g-ss', this.value); f();"> euros, a preços de hoje.
 
 <p>Para que nunca lhe falte dinheiro (espera viver até aos <input type="text" value="94" id="f-ev" style="width:2em" onkeyup="i('ex53', this.value); i('g-ev', this.value); f();"> anos), <span id="res"><strong>deve amealhar mensalmente 244 euros até à independência financeira</strong>. Assim, terá 225&nbsp;045 euros, a preços de hoje, quando atingir essa meta</span>.
-
-<p>Se quiser retomar ou partilhar este cálculos, use esta <a href="#r" id="hiper">hiperligação</a>.
 </div>
 
 <p>O que quer dizer “a preços de hoje”? Significa que os montantes devem ser atualizados anualmente ao mesmo ritmo do aumento dos preços, isto é, à taxa de inflação.
@@ -279,9 +277,6 @@ function f(){
 	if (pm > 0) { document.getElementById("res").innerHTML = "<strong>deve amealhar mensalmente " + pm.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + " euros até à independência financeira</strong>. Assim, terá " + pif.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + " euros, a preços de hoje, quando atingir essa meta"; }
 	else { document.getElementById("res").innerHTML = "não precisa de fazer nada: <strong>já amealhou o suficiente</strong>! Quando atingir a independência financeira, terá mais do que " +pif.toLocaleString("pt-PT", {minimumFractionDigits:0, maximumFractionDigits:0}) + " euros, a preços de hoje, que é o montante que necessita para o resto da vida"; }
 
-	var h = window.location.href.split("?")[0] + "?r=" + i + "+" + p + "+" + iif + "+" + d + "+" + ra + "+" + iss + "+" + ss + "+" + ev + "#r";
-	document.getElementById("hiper").href = h;
-
 	document.getElementById('g-pm').value = pm; 
 	g();
 }
@@ -407,7 +402,7 @@ window.onload = function(){
 	e('ex12', n('ex11', 0)*(1.05**(1/12)-1), 2);
 
 	if (void 0 !== window.location.href.split("?")[1]) {
-		var h = window.location.href.split("?")[1].split("=")[1].split("#")[0].split("+");
+		var h = window.location.href.split("?")[1].split("#")[0].split("+");
 		document.getElementById("f-i").value = h[0];
 		document.getElementById("f-p").value = h[1];
 		document.getElementById("f-iif").value = h[2];
